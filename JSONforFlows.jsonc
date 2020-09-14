@@ -1,32 +1,50 @@
-
+//Code for HTTP-Request Body Json Schema (1st Block) in "Notification Flow for IVR" in MS Flow
+{
+    "number": "string",
+    "name": "string",
+    "ivrName": "string"
+}
+//Code for Parse-JSON (2nd Block) in "Notification Flow for IVR" in MS Flow
 {
     "type": "object",
     "properties": {
-        "QueueDisplayName": { "type": "string" },
-        "RemotePartyName": { "type": "string" },
-        "RemotePartyUri": { "type": "string" },
-        "CallStartDateTime": { "type": "string" },
-        "CallEndDateTime": { "type": "string" },
-        "CallLength": { "type": "string" }
+        "number": {
+            "type": "string"
+        },
+        "name": {
+            "type": ["string", "null"]
+        },
+        "ivrName": {
+            "type": "string"
+        }
     }
 }
-
+//Code for HTTP-Request Body Json Schema (1st Block) in "Queue Call Flow Notfication" in MS Flow
 {
-    "type": "object",
-    "properties": {
-        "number": {"type": "string"},
-        "name": {"type": "string"},
-        "ivrName": {"type": "string"}
-    }
+    "CallStartDateTime": "string",
+    "RemotePartyName": "string",
+    "RemotePartyUri": "string",
+    "QueueDisplayName": "string",
+    "CallsInQueue": "string"
 }
-
+//Code for Parse-JSON block of "Queue Call Flow Notification" in MS Flow
 {
     "type": "object",
     "properties": {
-        "CallStartDateTime": { "type": "string" },
-        "RemotePartyName": { "type": "string" },
-        "RemotePartyUri": { "type": "string" },
-        "QueueDisplayName": { "type": "string" },
-        "CallsInQueue": { "type": "string" }
+        "CallStartDateTime": { 
+            "type": "string" 
+        },
+        "RemotePartyName": {
+            "type": "string" 
+        },
+        "RemotePartyUri": { 
+            "type": "string"
+         },
+        "QueueDisplayName": { 
+            "type": "string"
+         },
+        "CallsInQueue": { 
+            "type": ["string", "integer"]
+         }
     }
 }
