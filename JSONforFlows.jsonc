@@ -1,0 +1,32 @@
+
+{
+    "type": "object",
+    "properties": {
+        "QueueDisplayName": { "type": "string" },
+        "RemotePartyName": { "type": "string" },
+        "RemotePartyUri": { "type": "string" },
+        "CallStartDateTime": { "type": "string" },
+        "CallEndDateTime": { "type": "string" },
+        "CallLength": { "type": "string" }
+    }
+}
+
+{
+    "type": "object",
+    "properties": {
+        "number": {"type": "string"},
+        "name": {"type": "string"},
+        "ivrName": {"type": "string"}
+    }
+}
+
+{
+    "type": "object",
+    "properties": {
+        "CallStartDateTime": { "type": "string" },
+        "RemotePartyName": { "type": "string" },
+        "RemotePartyUri": { "type": "string" },
+        "QueueDisplayName": { "type": "string" },
+        "CallsInQueue": { "type": "string" }
+    }
+}
